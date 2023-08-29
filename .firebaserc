@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "video-analyzer-26cb0": {
+      "hosting": {
+        "video-analyzer": [
+          "video-analyzer-26cb0"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "video-analyzer-26cb0"
+  }
+}
