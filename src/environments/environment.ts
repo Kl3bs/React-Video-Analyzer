@@ -8,5 +8,7 @@ export const environment = {
     authDomain: 'video-analyzer-26cb0.firebaseapp.com',
     messagingSenderId: '98090469729',
     measurementId: 'G-882JET8QVG',
+    GAPI_CLIENT_ID:
+      '98090469729-9jehi7a52pnr7e32hbpocsgoe5q3pcq8.apps.googleusercontent.com',
   },
 };

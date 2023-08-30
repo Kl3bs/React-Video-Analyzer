@@ -1,9 +1,12 @@
 {
-  "hosting": [
-    {
-      "target": "video-analyzer",
-      "source": ".",
-      "frameworksBackend": {}
+  "hosting": {
+    "source": ".",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "frameworksBackend": {
+      "region": "us-central1"
     }
-  ]
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
 }
