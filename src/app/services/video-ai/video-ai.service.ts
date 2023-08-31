@@ -12,7 +12,7 @@ export class VideoAiService {
   constructor(private http: HttpClient) {}
 
   token =
-    'ya29.a0AfB_byCOV6TxXohW9Yo1ugJWPWu3l5hkH9Zv73Pqs1neYLGzR7m8AAnmOdoP1aMBvcztIUbLQ4hwliSHf3_-2OnB4CjmfpnPj5TlCTrD87t1W6bGCc7S0HmGgFiU-BqN6ou9PZCGld3rREHSHlSK-dSEcZTutKFzN8FqnRsVme-gaCgYKAbgSARISFQHsvYlsV3p0J1Dqmxz1OqOQy_hHBA0179';
+    'ya29.a0AfB_byB0gmlhZRpSYa36NadyzYgnMHzp583aITGWW7mQdqbohCKelHqzutJNjCPF4_qJue2VhsZQ-pQ1kIDnTV_XNlBKhtckiFCYOx4zpJhsKY47v57MJXVJk9pt11u4OpctzR3mcJ7vVNgzJbEi0KGn5NKs6kQVDlgIHPmADG3SaCgYKAQASARISFQHsvYlsBkEn-tI9pl4QQFOzLZXpCA0179';
   headers = new HttpHeaders({
     Authorization: `Bearer ${this.token}`,
   });
