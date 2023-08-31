@@ -22,6 +22,7 @@ import { Auth, GoogleAuthProvider } from '@angular/fire/auth';
 export class AppComponent {
   title = 'video-analyzer';
   videos: any[] = [];
+  result_list: any[] = [];
 
   constructor(
     private loadingService: NgxSpinnerService,
@@ -79,7 +80,7 @@ export class AppComponent {
       .then((res) => {
         res.items.forEach((itemRef) => {
           getDownloadURL(ref(storage, itemRef.name)).then((res) =>
-            this.videos.push({ name: itemRef.name, link: res })
+            this.videos.push({ name: itemRef.name, link: res, annotation: '' })
           );
         });
       })
@@ -88,7 +89,21 @@ export class AppComponent {
       });
   }
 
-  checkContent(title: string) {
-    this.videoService.sendVideo(title).subscribe((res) => console.log(res));
+  analiseContent(title: string, index: number) {
+    this.videoService.sendVideo(title).subscribe((res: any) => {
+      (this.videos[index].annotation = res.name),
+        console.log(this.videos[index]);
+    });
+  }
+
+  checkContent(title: string, index: number) {
+    this.videoService
+      .getVideoInformation(this.videos[index].annotation)
+      .subscribe((res: any) => {
+        console.log(res),
+          (this.result_list =
+            res.response.annotationResults[0].shotLabelAnnotations);
+      });
   }
 }
+//response.annotationResults.segmentLabelAnnotations;

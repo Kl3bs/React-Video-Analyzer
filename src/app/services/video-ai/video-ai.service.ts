@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 const url = 'https://videointelligence.googleapis.com/v1';
@@ -11,7 +12,7 @@ export class VideoAiService {
   constructor(private http: HttpClient) {}
 
   token =
-    'ya29.a0AfB_byDsEK0ffILthS5yXs9tQzzniB_m13n2vopMrQJo6YTyGadwHFJzdwmH2d66h3bSo3JxHRfz4CUanX43zS1Be-q2vNRdbbk1LpZcvSXm4lIt3maKddfuCiYEnLRIlqmt93leM3zDcDTYxjpQqtxRAgMg24eNJ4dCvNEgzwJZaCgYKAV0SARISFQHsvYlsl8JgDHYqHT-RXFvah1nBVw0179';
+    'ya29.a0AfB_byCOV6TxXohW9Yo1ugJWPWu3l5hkH9Zv73Pqs1neYLGzR7m8AAnmOdoP1aMBvcztIUbLQ4hwliSHf3_-2OnB4CjmfpnPj5TlCTrD87t1W6bGCc7S0HmGgFiU-BqN6ou9PZCGld3rREHSHlSK-dSEcZTutKFzN8FqnRsVme-gaCgYKAbgSARISFQHsvYlsV3p0J1Dqmxz1OqOQy_hHBA0179';
   headers = new HttpHeaders({
     Authorization: `Bearer ${this.token}`,
   });
@@ -28,6 +29,8 @@ export class VideoAiService {
   }
 
   getVideoInformation(name: string) {
-    return this.http.get(`${url}/operations/${name}`);
+    return this.http.get(`${url}/operations/${name}`, {
+      headers: this.headers,
+    });
   }
 }
