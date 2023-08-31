@@ -1,27 +1,47 @@
-# VideoAnalyzer
+# Aplicação Angular com Integração Firebase e Google Video Intelligence API 🚀
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+  O objetivo principal desta aplicação é aproveitar a API da Google para extrair informações relevantes de vídeos e exibi-las de maneira organizada, a fim de demonstrar o poder da Google API (Video intelligence). 🎥🔍
 
-## Development server
+## Funcionalidades ✨
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Integração com Firebase:** A aplicação utiliza o Firebase para autenticação de usuários, armazenamento de dados e hospedagem. 🔥👤
 
-## Code scaffolding
+- **Google Video Intelligence API:** A aplicação faz uso da Google Video Intelligence API para analisar vídeos e extrair informações como detecção de objetos, detecção de rostos, reconhecimento de fala, entre outros. 📊🤖
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Interface Amigável com Angular e Tailwind CSS:** A interface da aplicação foi desenvolvida com o framework Angular, oferecendo uma experiência de usuário suave e interativa. O Tailwind CSS foi utilizado para a estilização, garantindo um design moderno e responsivo. 💻🎨
 
-## Build
+## Configuração ⚙️
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Antes de executar a aplicação, siga as etapas abaixo para configurar as integrações necessárias:
 
-## Running unit tests
+1. **Firebase Configuração:**
+   - Crie um projeto no [Firebase Console](https://console.firebase.google.com/).
+   - Obtenha as credenciais de configuração (apiKey, authDomain, projectId, etc.).
+   - Cole as credenciais no arquivo `src/environments/environment.ts`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. **Google Video Intelligence API Configuração:**
+   - Crie um projeto na [Google Cloud Console](https://console.cloud.google.com/).
+   - Habilite a Google Video Intelligence API para o projeto.
+   - Gere uma chave de API e adicione-a ao código onde for necessário para fazer chamadas à API.
 
-## Running end-to-end tests
+## Instalação 🛠️
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Siga as etapas abaixo para instalar e executar a aplicação localmente:
 
-## Further help
+1. Clone este repositório para o seu ambiente local.
+2. Navegue até o diretório do projeto: `cd nome-do-diretorio`.
+3. Instale as dependências: `npm install`.
+4. Inicie a aplicação: `ng serve`.
+5. Abra o navegador e acesse: `http://localhost:4200`.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Uso 🚀
+
+1. Na página inicial, faça login na aplicação utilizando as opções de autenticação fornecidas pelo Firebase.
+2. Uma vez autenticado, você terá acesso à funcionalidade de upload de vídeos.
+3. Após o upload de um vídeo, a aplicação utilizará a Google Video Intelligence API para analisar o vídeo e extrair informações relevantes.
+4. As informações extraídas serão apresentadas de maneira organizada e visualmente agradável na interface da aplicação.
+
+## Contribuição 🤝
+
+Contribuições são bem-vindas! Se você encontrar algum problema, bug ou tiver sugestões para melhorias, sinta-se à vontade para abrir uma issue neste repositório. Se desejar contribuir diretamente, faça um fork do repositório, crie um branch para suas alterações e, quando estiver pronto, abra um pull request explicando suas alterações.
+ 
